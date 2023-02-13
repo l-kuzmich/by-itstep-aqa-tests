@@ -1,6 +1,8 @@
 package by.itstep.aqa.tests.service;
 
 import by.itstep.aqa.tests.page.LoginPage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 
 public class LoginService extends BaseService{
@@ -12,6 +14,8 @@ public class LoginService extends BaseService{
     }
 
     public LoginPage getLoginPage(){
+        Logger logger = LoggerFactory.getLogger(LoginService.class);
+        logger.info("This is an INFO log message!");
         return loginPage;
     }
 }

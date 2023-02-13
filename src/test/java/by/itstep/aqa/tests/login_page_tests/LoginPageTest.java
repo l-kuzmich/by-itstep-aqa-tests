@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
+//import java.time.Duration;
+
 
 public class LoginPageTest extends BaseUITestsClass {
 
@@ -30,14 +31,14 @@ public class LoginPageTest extends BaseUITestsClass {
     public void verifyPasswordFieldVisibility(){
         loginService = new LoginService(driver);
 
-        Assertions.assertEquals(true, loginService.getLoginPage().getLoginBlock().passwordField.isDisplayed());
+        Assertions.assertTrue(loginService.getLoginPage().getLoginBlock().passwordField.isDisplayed());
     }
 
     @Test
     public void verifyLoginButtonVisibility(){
         loginService = new LoginService(driver);
 
-        Assertions.assertEquals(true, loginService.getLoginPage().getLoginBlock().loginButton.isDisplayed());
+        Assertions.assertTrue(loginService.getLoginPage().getLoginBlock().loginButton.isDisplayed());
     }
 
     @Test
@@ -54,7 +55,7 @@ public class LoginPageTest extends BaseUITestsClass {
         loginService.getLoginPage().getLoginBlock().loginButton.click();
 
         //then
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
         String actualErrorMessageText = loginService.getLoginPage().getLoginBlock().errorPasswordLabel.getText();
         Assertions.assertEquals(expectedErrorMessage, actualErrorMessageText);
     }
@@ -75,7 +76,7 @@ public class LoginPageTest extends BaseUITestsClass {
         loginService.getLoginPage().getLoginBlock().loginButton.click();
 
         //then
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(400000));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofMillis(400000));
         Assertions.assertTrue(profileService.getProfilePage().getProfileBlock().profileName.isDisplayed());
     }
 
