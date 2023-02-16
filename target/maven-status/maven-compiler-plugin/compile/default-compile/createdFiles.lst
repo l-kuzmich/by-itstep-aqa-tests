@@ -1,0 +1,9 @@
+by\itstep\aqa\tests\page\LoginPage.class
+by\itstep\aqa\tests\service\ProfileService.class
+by\itstep\aqa\tests\block\LoginBlock.class
+by\itstep\aqa\tests\block\ProfileBlock.class
+by\itstep\aqa\tests\page\ProfilePage.class
+by\itstep\aqa\tests\block\BaseBlock.class
+by\itstep\aqa\tests\page\BasePage.class
+by\itstep\aqa\tests\service\BaseService.class
+by\itstep\aqa\tests\service\LoginService.class
