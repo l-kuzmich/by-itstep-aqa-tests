@@ -24,7 +24,7 @@ public class LoginPageTest extends BaseUITestsClass {
     public void verifyLoginFieldVisibility(){
         loginService = new LoginService(driver);
 
-        Assertions.assertEquals(true, loginService.getLoginPage().getLoginBlock().loginField.isDisplayed());
+        Assertions.assertTrue(loginService.getLoginPage().getLoginBlock().loginField.isDisplayed());
     }
 
     @Test
